@@ -1,0 +1,45 @@
+@import "common/styles/variables";
+@import "common/styles/bootstrap/bootstrap";
+@import "bs-inputs";
+
+
+/**
+ * Radio inputs
+ */
+
+.bs-radio-input {
+  @extend %bs-input;
+
+  input + .bs-input__element {
+    border-radius: 50%;
+
+    &::after {
+      content: '\f10c';
+    }
+  }
+
+  input:checked + .bs-input__element::after {
+    content: '\f192';
+    color: $primary;
+  }
+}
+
+
+/**
+ * Validation statuses
+ */
+
+.was-validated .bs-radio-input,
+.was-validated.bs-radio-input {
+  input[value='']:checked + .bs-input__element {
+    &::after { color: $danger; }
+    & + * { color: $danger; }
+  }
+}
+
+.not-validated .bs-radio-input,
+.not-validated.bs-radio-input {
+  input[required] + .bs-input__element {
+    &::after { color: $warning; }
+  }
+}

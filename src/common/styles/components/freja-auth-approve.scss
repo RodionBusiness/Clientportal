@@ -1,0 +1,19 @@
+.freja-auth-approve {
+  &__spinner-container {
+    padding: 50px 0 70px;
+    text-align: center;
+  }
+
+  &__icon {
+    text-align: center;
+    margin: 60px 0 20px;
+  }
+
+  &__note {
+    text-align: center;
+  }
+
+  &__spinner {
+    color: lightgray;
+  }
+}

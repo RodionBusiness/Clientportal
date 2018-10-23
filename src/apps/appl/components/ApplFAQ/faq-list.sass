@@ -1,0 +1,47 @@
+.faq-list
+  $item-selected-gb-color: #64686a
+  $item-gb-color: #eeeeee
+  $gutter: 32px
+
+  &__item
+    &__header
+      padding: $gutter/2 $gutter
+      margin-bottom: 0
+      margin-top: 0
+      cursor: pointer
+
+      &:focus
+        outline: none
+
+      &:hover
+        background-color: $item-gb-color
+
+      &:before
+        display: inline-block
+        content: "\f067"
+        font-family: FontAwesome
+        font-size: 14px
+        padding-right: $gutter
+        width: 0
+
+      &--active
+
+
+    &--active &__header
+        background-color: $item-selected-gb-color
+        color: white
+
+        &:before
+          content: "\f068"
+
+    &__content
+      padding: 0 $gutter $gutter/2 $gutter*2
+      background-color: $item-selected-gb-color
+      color: white
+
+      div > *:last-child
+        margin-bottom: 0
+
+      a
+        color: white
+        text-decoration: underline

@@ -1,0 +1,53 @@
+@import "common/styles/variables";
+@import "common/styles/bootstrap/bootstrap";
+@import "bs-inputs";
+
+
+/**
+ * Checkbox inputs
+ */
+
+.bs-checkbox-input {
+  @extend %bs-input;
+
+  input + .bs-input__element {
+    border-radius: 2px;
+
+    &::after {
+      content: '\f096';
+    }
+  }
+
+  input:checked + .bs-input__element::after {
+    content: '\f046';
+    color: $primary;
+  }
+}
+
+
+/**
+ * Validation statuses
+ */
+
+.was-validated .bs-checkbox-input,
+.was-validated.bs-checkbox-input {
+  input[required]:not(:checked) + .bs-input__element {
+    &::after { color: $danger; }
+    & + * { color: $danger; }
+  }
+
+  input[required]:not(:checked):focus + .bs-input__element {
+    box-shadow: 0 0 0 3px lighten($danger, 30%);
+  }
+}
+
+.not-validated .bs-checkbox-input,
+.not-validated.bs-checkbox-input {
+  input[required] + .bs-input__element {
+    &::after { color: $warning; }
+  }
+
+  input[required]:focus + .bs-input__element {
+    box-shadow: 0 0 0 3px lighten($warning, 30%);
+  }
+}

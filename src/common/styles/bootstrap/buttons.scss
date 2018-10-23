@@ -1,0 +1,51 @@
+.btn-warning {
+  &,
+  &:hover,
+  &:active {
+    color: white !important;
+  }
+}
+
+.btn-freja {
+  @include button-outline-variant(#3c3482, #f7f6f7);
+
+  padding: 10px;
+  line-height: 32px;
+
+  &__icon {
+    float: left;
+    border-right: 1px solid #3c3482;
+    padding-right: 10px;
+  }
+
+  &__text {
+    margin-left: -40px;
+  }
+}
+
+.btn-store {
+  @include button-outline-variant(black, #f7f6f7);
+
+  position: relative;
+
+  &__icon {
+    font-size: 40px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+  }
+
+  &__text {
+    float: left;
+    margin-left: 40px;
+    font-size: 11px;
+  }
+
+  &__name {
+    float: left;
+    margin-left: 40px;
+    clear: left;
+    font-size: 19px;
+    font-weight: bold;
+  }
+}

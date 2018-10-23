@@ -1,0 +1,33 @@
+.appl-currency-lookup
+  &__input
+    padding-left: calc(13px * 2 + 16px)
+    background-image: url('apps/appl/assets/images/search-input-bg-icon.svg')
+    background-repeat: no-repeat
+    background-size: 16px 16px
+    background-position: 13px center
+    width: 100%
+
+    &--focused
+      outline: none
+
+  &__suggestions-container
+    background: white
+    z-index: 99
+    position: absolute
+    box-shadow: 2px 2px 3px lightgrey
+    border-radius: 0.25rem
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    width: 100%
+
+  &__suggestions-list
+    margin: 0
+    padding: 0
+    list-style: none
+
+  &__suggestion
+    padding: 0.5rem 1rem
+
+    &--highlighted
+      color: white
+      background: black
